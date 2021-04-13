@@ -1,6 +1,4 @@
 import 'package:chart_app/widgets/transaction_list.dart';
-import 'package:flutter/gestures.dart';
-
 import './Models/transaction.dart';
 import './widgets/new_transaction.dart';
 import 'package:flutter/material.dart';
@@ -16,7 +14,8 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.purple,
+        accentColor: Colors.amber,
       ),
       home: MyHomePage(),
     );
@@ -77,7 +76,7 @@ class _MyHomePageState extends State<MyHomePage> {
           Container(
             width: double.infinity,
             child: Card(
-              color: Colors.blue,
+              color: Theme.of(context).primaryColor,
               child: Text('CHART!'),
               elevation: 5,
             ),
