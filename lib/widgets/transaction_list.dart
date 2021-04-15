@@ -16,7 +16,7 @@ class TransactionList extends StatelessWidget {
               children: [
                 Text(
                   'No transaction added yet!',
-                  style: Theme.of(context).textTheme.title,
+                  style: Theme.of(context).textTheme.headline6,
                 ),
                 SizedBox(
                   height: 20,
@@ -39,7 +39,7 @@ class TransactionList extends StatelessWidget {
                             EdgeInsets.symmetric(vertical: 10, horizontal: 15),
                         child: Text(
                           '\$${transaction[index].amount.toStringAsFixed(2)}',
-                          style: Theme.of(context).textTheme.title,
+                          style: Theme.of(context).textTheme.headline6,
                         ),
                         decoration: BoxDecoration(
                             border: Border.all(

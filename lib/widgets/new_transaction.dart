@@ -48,6 +48,7 @@ class _NewTransactionState extends State<NewTransaction> {
               keyboardType: TextInputType.number,
               onSubmitted: (_) => submitData(),
             ),
+            // ignore: deprecated_member_use
             FlatButton(
               onPressed: submitData,
               child: Text('Add Transaction'),
