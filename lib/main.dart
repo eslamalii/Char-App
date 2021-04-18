@@ -13,18 +13,18 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
+      title: 'Chart App',
       theme: ThemeData(
-          primarySwatch: Colors.purple,
-          accentColor: Colors.amber,
+          primarySwatch: Colors.teal,
+          accentColor: Colors.teal,
           fontFamily: 'Quicksand',
           textTheme: ThemeData.light().textTheme.copyWith(
-                headline6: TextStyle(
-                  fontFamily: 'OpenSans',
-                  fontSize: 18,
-                  fontWeight: FontWeight.bold,
-                ),
+              headline6: TextStyle(
+                fontFamily: 'OpenSans',
+                fontSize: 18,
+                fontWeight: FontWeight.bold,
               ),
+              button: TextStyle(color: Colors.white)),
           appBarTheme: AppBarTheme(
               textTheme: ThemeData.light().textTheme.copyWith(
                       headline6: TextStyle(
@@ -44,18 +44,30 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   final List<Transaction> _userTransactions = [
-    // Transaction(
-    //   id: '1',
-    //   title: 'Test',
-    //   amount: 99.99,
-    //   date: DateTime.now(),
-    // ),
-    // Transaction(
-    //   id: '2',
-    //   title: 'Test21',
-    //   amount: 92.99,
-    //   date: DateTime.now(),
-    // ),
+    Transaction(
+      id: '1',
+      title: 'Test',
+      amount: 99.99,
+      date: DateTime.now(),
+    ),
+    Transaction(
+      id: '2',
+      title: 'Test21',
+      amount: 92.99,
+      date: DateTime.now(),
+    ),
+    Transaction(
+      id: '3',
+      title: 'TestTestTest',
+      amount: 9.99,
+      date: DateTime.now(),
+    ),
+    Transaction(
+      id: '4',
+      title: 'Test3',
+      amount: 5.99,
+      date: DateTime.now(),
+    ),
   ];
 
   List<Transaction> get _recentTransactions {
@@ -97,7 +109,7 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Flutter Demo'),
+        title: Text('Chart App'),
         actions: [
           IconButton(
             icon: Icon(Icons.add),

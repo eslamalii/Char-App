@@ -32,39 +32,24 @@ class TransactionList extends StatelessWidget {
           : ListView.builder(
               itemBuilder: (cxt, index) {
                 return Card(
-                  child: Row(
-                    children: [
-                      Container(
-                        margin:
-                            EdgeInsets.symmetric(vertical: 10, horizontal: 15),
-                        child: Text(
-                          '\$${transaction[index].amount.toStringAsFixed(2)}',
-                          style: Theme.of(context).textTheme.headline6,
+                  elevation: 5,
+                  margin: EdgeInsets.symmetric(horizontal: 5, vertical: 7),
+                  child: ListTile(
+                    leading: CircleAvatar(
+                      radius: 30,
+                      child: Padding(
+                        padding: EdgeInsets.all(6),
+                        child: FittedBox(
+                          child: Text('\$${transaction[index].amount}'),
                         ),
-                        decoration: BoxDecoration(
-                            border: Border.all(
-                          color: Theme.of(context).primaryColor,
-                          width: 2,
-                        )),
-                        padding: EdgeInsets.all(10),
                       ),
-                      Spacer(),
-                      Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text(
-                            transaction[index].title,
-                            style: TextStyle(
-                                fontWeight: FontWeight.bold, fontSize: 18),
-                          ),
-                          Text(
-                            DateFormat.MMMEd().format(transaction[index].date),
-                            style: TextStyle(color: Colors.grey),
-                          ),
-                        ],
-                      ),
-                      Spacer(),
-                    ],
+                    ),
+                    title: Text(
+                      transaction[index].title,
+                      style: Theme.of(context).textTheme.headline6,
+                    ),
+                    subtitle: Text(
+                        DateFormat.yMMMEd().format(transaction[index].date)),
                   ),
                 );
               },
