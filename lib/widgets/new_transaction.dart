@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+=======
+import 'dart:io';
+import 'dart:ui';
+>>>>>>> b79e4f9170a1c487a001a104175ade3de3140fbe
 import 'package:chart_app/widgets/AdaptiveFlatButton.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -87,7 +92,10 @@ class _NewTransactionState extends State<NewTransaction> {
               ),
             ),
             AdaptiveFlatButton('Choose Date', _presentDatePicker),
+<<<<<<< HEAD
             // ignore: deprecated_member_use
+=======
+>>>>>>> b79e4f9170a1c487a001a104175ade3de3140fbe
             RaisedButton(
               onPressed: _submitData,
               child: Text('Add Transaction'),

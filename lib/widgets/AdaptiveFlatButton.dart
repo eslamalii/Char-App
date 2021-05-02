@@ -19,8 +19,12 @@ class AdaptiveFlatButton extends StatelessWidget {
             ),
             onPressed: handler,
           )
+<<<<<<< HEAD
         // ignore: deprecated_member_use
         : RaisedButton(
+=======
+        : FlatButton(
+>>>>>>> b79e4f9170a1c487a001a104175ade3de3140fbe
             textColor: Theme.of(context).primaryColor,
             onPressed: handler,
             child: Text(
