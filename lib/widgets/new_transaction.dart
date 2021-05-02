@@ -1,4 +1,5 @@
-import 'dart:ui';
+import 'package:chart_app/widgets/AdaptiveFlatButton.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 
@@ -53,7 +54,12 @@ class _NewTransactionState extends State<NewTransaction> {
     return Card(
       elevation: 5,
       child: Container(
-        padding: EdgeInsets.all(10),
+        padding: EdgeInsets.only(
+          top: 10,
+          left: 10,
+          right: 10,
+          bottom: MediaQuery.of(context).viewInsets.bottom + 10,
+        ),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.end,
           children: [
@@ -77,17 +83,10 @@ class _NewTransactionState extends State<NewTransaction> {
                         ? 'No Date Chosen!'
                         : 'Picked Date: ${DateFormat.yMd().format(_selectedDate)}'),
                   ),
-                  // ignore: deprecated_member_use
-                  RaisedButton(
-                      textColor: Theme.of(context).primaryColor,
-                      onPressed: _presentDatePicker,
-                      child: Text(
-                        'Choose Date',
-                        style: TextStyle(fontWeight: FontWeight.bold),
-                      ))
                 ],
               ),
             ),
+            AdaptiveFlatButton('Choose Date', _presentDatePicker),
             // ignore: deprecated_member_use
             RaisedButton(
               onPressed: _submitData,
